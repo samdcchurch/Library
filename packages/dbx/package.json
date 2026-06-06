@@ -24,6 +24,7 @@
   "devDependencies": {
     "@tools/eslint": "workspace:*",
     "@tools/typescript": "workspace:*",
+    "@tools/vitest": "workspace:*",
     "typescript-eslint": "^8.60.1"
   }
 }

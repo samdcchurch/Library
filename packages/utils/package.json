@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@tools/eslint": "workspace:*",
-    "@tools/typescript": "workspace:*"
+    "@tools/typescript": "workspace:*",
+    "@tools/vitest": "workspace:*"
   }
 }
