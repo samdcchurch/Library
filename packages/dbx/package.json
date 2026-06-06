@@ -1,0 +1,29 @@
+{
+  "name": "@library/dbx",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#~/*": {
+      "@library/production": "./dist/*",
+      "default": "./src/*"
+    }
+  },
+  "exports": {
+    "@library/production": "./dist/index.js",
+    "default": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "lint": "eslint --max-warnings 0 *.js ./src"
+  },
+  "dependencies": {
+    "@library/models": "workspace:*",
+    "@library/types": "workspace:*",
+    "@library/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@tools/eslint": "workspace:*",
+    "@tools/typescript": "workspace:*",
+    "typescript-eslint": "^8.60.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["./default.json", "../config/node20.json"],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}

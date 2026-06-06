@@ -1,0 +1,26 @@
+{
+  "name": "@tools/vitest",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/types.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./setup/*": "./lib/setup/*.ts"
+  },
+  "scripts": {
+    "clean": "del-cli coverage",
+    "format": "x-prettier ./ --check",
+    "lint": "eslint --max-warnings 0 *.js ./lib",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "vitest": "^4.1.8"
+  },
+  "devDependencies": {
+    "@tools/eslint": "workspace:*",
+    "@tools/typescript": "workspace:*",
+    "es-toolkit": "^1.47.0"
+  }
+}

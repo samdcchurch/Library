@@ -1,0 +1,17 @@
+{
+  "name": "@tools/typescript",
+  "private": true,
+  "exports": {
+    ".": "./default.json",
+    "./*": "./*.json",
+    "./config/*": "./config/*.json",
+    "./preset/*": "./preset/*.json"
+  },
+  "scripts": {
+    "format": "x-prettier ./ --check",
+    "spellcheck": "cspell lint '**' --no-progress"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

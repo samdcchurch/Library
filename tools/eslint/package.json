@@ -1,0 +1,45 @@
+{
+  "name": "@tools/eslint",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "types": "./lib/types.d.ts",
+    "default": "./lib/index.js"
+  },
+  "scripts": {
+    "clean": "del-cli coverage",
+    "format": "x-prettier ./ --check",
+    "lint": "eslint --max-warnings 0 *.js ./lib",
+    "spellcheck": "cspell lint '**' --no-progress",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@vitest/eslint-plugin": "^1.6.19",
+    "es-toolkit": "^1.47.0",
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-astro": "^1.7.0",
+    "eslint-plugin-better-tailwindcss": "^4.5.0",
+    "eslint-plugin-es-x": "^9.6.0",
+    "eslint-plugin-hooks": "^0.4.3",
+    "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-jsdoc": "^63.0.1",
+    "eslint-plugin-n": "^18.0.1",
+    "eslint-plugin-perfectionist": "^5.9.0",
+    "eslint-plugin-promise": "^7.3.0",
+    "eslint-plugin-sonarjs": "^4.0.3",
+    "eslint-plugin-sort-react-dependency-arrays": "^1.0.0",
+    "eslint-plugin-unicorn": "^64.0.0",
+    "globals": "^17.6.0",
+    "typescript-eslint": "^8.60.1"
+  },
+  "devDependencies": {
+    "@tools/typescript": "workspace:*",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "vitest": "^4.1.8"
+  }
+}

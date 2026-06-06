@@ -1,0 +1,25 @@
+{
+  "name": "@library/types",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#~/*": {
+      "@library/production": "./dist/*",
+      "default": "./src/*"
+    }
+  },
+  "exports": {
+    "@library/production": "./dist/index.js",
+    "default": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "lint": "eslint --max-warnings 0 *.js ./src"
+  },
+  "devDependencies": {
+    "@tools/eslint": "workspace:*",
+    "@tools/typescript": "workspace:*",
+    "typescript-eslint": "^8.60.1"
+  }
+}

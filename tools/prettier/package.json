@@ -1,0 +1,23 @@
+{
+  "name": "@tools/prettier",
+  "type": "module",
+  "exports": {
+    "types": "./lib/types.d.ts",
+    "default": "./lib/index.js"
+  },
+  "bin": {
+    "x-prettier": "./bin/x-prettier.js"
+  },
+  "scripts": {
+    "clean": "del-cli coverage",
+    "format": "x-prettier ./ --check",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "es-toolkit": "^1.47.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-jsdoc": "^1.8.1",
+    "prettier-plugin-packagejson": "^3.0.2"
+  }
+}
