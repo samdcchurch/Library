@@ -19,12 +19,15 @@
   "dependencies": {
     "@library/models": "workspace:*",
     "@library/types": "workspace:*",
-    "@library/utils": "workspace:*"
+    "@library/utils": "workspace:*",
+    "kysely": "^0.29.2",
+    "pg": "^8.22.0"
   },
   "devDependencies": {
     "@tools/eslint": "workspace:*",
     "@tools/typescript": "workspace:*",
     "@tools/vitest": "workspace:*",
+    "@types/pg": "^8.20.0",
     "typescript-eslint": "^8.60.1"
   }
 }
