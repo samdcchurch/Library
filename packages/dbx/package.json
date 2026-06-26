@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "codegen:kysely": "kysely-codegen --url $DATABASE_URL --dialect postgres --out-file ./src/pg/schema/kysely-generated.ts",
+    "codegen:kysely": "dotenv -e ../../.env -- sh -c 'kysely-codegen --dialect postgres --url $DATABASE_URL --out-file ./src/pg/schema/kysely.generated.ts'",
     "lint": "eslint --max-warnings 0 *.js ./src"
   },
   "dependencies": {
