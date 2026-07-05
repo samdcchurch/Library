@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
+    "codegen:kysely": "dotenv -e ../../.env -- sh -c 'kysely-codegen --dialect postgres --url $DATABASE_URL --out-file ./src/pg/schema/kysely.generated.ts'",
     "lint": "eslint --max-warnings 0 *.js ./src"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "@tools/typescript": "workspace:*",
     "@tools/vitest": "workspace:*",
     "@types/pg": "^8.20.0",
+    "kysely-codegen": "^0.20.0",
     "typescript-eslint": "^8.60.1"
   }
 }
